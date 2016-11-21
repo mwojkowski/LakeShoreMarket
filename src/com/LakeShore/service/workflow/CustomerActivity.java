@@ -1,0 +1,101 @@
+package com.LakeShore.service.workflow;
+
+import com.LakeShore.Manager.CustomerManager;
+import com.LakeShore.service.representation.CustomerRepresentation;
+import com.LakeShore.Model.Customer;
+
+import java.util.*;
+
+/**
+ * Created by matthewwojkowski on 11/8/16.
+ */
+public class CustomerActivity {
+    private static CustomerManager cManager = new CustomerManager();
+
+    public CustomerActivity(){
+
+    }
+
+    public Set<CustomerRepresentation> getCustomers(){
+        Set<Customer> customers = new HashSet<Customer>();
+
+        Set<CustomerRepresentation> customerRepresentations = new HashSet<CustomerRepresentation>();
+
+        customers = cManager.getAllCustomers();
+        Iterator<Customer> cIterator = customers.iterator();
+        while(cIterator.hasNext()){
+            Customer temp = (Customer)cIterator.next();
+            CustomerRepresentation cusRepTemp = new CustomerRepresentation();
+            cusRepTemp.setID(temp.getID());
+            cusRepTemp.setFirstName(temp.getFirstName());
+            cusRepTemp.setLastName(temp.getLastName());
+            cusRepTemp.setAddress(temp.getAddress());
+            cusRepTemp.setPhoneNumber(temp.getPhoneNumber());
+            cusRepTemp.setCity(temp.getCity());
+            cusRepTemp.setState(temp.getState());
+            cusRepTemp.setZip(temp.getZip());
+
+            customerRepresentations.add(cusRepTemp);
+        }//close while loop
+
+        return customerRepresentations;
+    }//close getCustomers()
+    
+
+    public CustomerRepresentation getCustomerById(int id){
+        Customer temp = cManager.getCustomerById(id);
+
+        CustomerRepresentation cusRep = new CustomerRepresentation();
+        cusRep.setID(temp.getID());
+        cusRep.setFirstName(temp.getFirstName());
+        cusRep.setLastName(temp.getLastName());
+        cusRep.setAddress(temp.getAddress());
+        cusRep.setPhoneNumber(temp.getPhoneNumber());
+        cusRep.setCity(temp.getCity());
+        cusRep.setState(temp.getState());
+        cusRep.setZip(temp.getZip());
+
+        return cusRep;
+
+    }//close getCustomerById()
+
+    public CustomerRepresentation createCustomer(String firstName, String lastName){
+        Customer cust = cManager.addCustomer(firstName, lastName);
+
+        CustomerRepresentation custRep = new CustomerRepresentation();
+        
+        
+        custRep.setID(cust.getID());
+        custRep.setFirstName(cust.getFirstName());
+        custRep.setLastName(cust.getLastName());
+
+        return custRep;
+    }//close createCustomer
+
+    public void updateCustomerAddress(String id, String address){
+    	cManager.updateCustomerAddress(Integer.valueOf(id), address);    
+    }//close updateCustomerAddress()
+    
+    public void updatePhoneNumber(String id, String phoneNumber){
+    	cManager.updatePhoneNumber(Integer.valueOf(id), phoneNumber);
+    }//close updatePhoneNumber()
+    
+    public void updateCity(String id, String city){
+    	cManager.updateCity(Integer.valueOf(id), city);
+    }//close updateCity()
+    
+    public void updateState(String id, String state){
+    	cManager.updateState(Integer.valueOf(id), state);
+    }//close updateState()
+    
+    public void updateZip(String id, String zip){
+    	cManager.updateZip(Integer.valueOf(id), zip);
+    }//close updateZip()
+    
+    public void deleteCustomer(String id){
+    	cManager.deleteCustomer(Integer.valueOf(id));
+    }//close deleteCustomer()
+
+
+
+}//class
