@@ -15,11 +15,12 @@
   <bean id="jacksonProvider" class="org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider" />
       	
   
-	<jaxrs:server name="CustomerService" address="http://localhost:8081">
+	<jaxrs:server name="RESTfulService" address="http://localhost:8081">
 		<jaxrs:serviceBeans>
 			<ref bean="CustomerServiceRest" />
 			<ref bean="PartnerServiceRest" />
 			<ref bean="ProductServiceRest" />
+			<ref bean="OrderServiceRest" />
 		</jaxrs:serviceBeans>
 		<jaxrs:providers>
 			<ref bean="jacksonProvider" />
@@ -38,5 +39,6 @@
   	<bean id="CustomerServiceRest" class="com.LakeShore.service.CustomerResource" />
   	<bean id="PartnerServiceRest" class="com.LakeShore.service.PartnerResource" />
   	<bean id="ProductServiceRest" class="com.LakeShore.service.ProductResource" />
+  	<bean id="OrderServiceRest" class="com.LakeShore.service.OrderResource" />
   
 </beans>
