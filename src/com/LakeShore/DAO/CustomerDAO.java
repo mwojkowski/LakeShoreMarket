@@ -31,7 +31,7 @@ public class CustomerDAO {
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
 
-            String prequery = "Select * FROM Customers where Active = 0";
+            String prequery = "Select * FROM Customers where Active = 1";
             PreparedStatement query = connection.prepareStatement(prequery);
 
             temp = query.executeQuery();
@@ -151,6 +151,7 @@ public class CustomerDAO {
         Customer temp = new Customer();
 
         try {
+        	Class.forName("com.mysql.jdbc.Driver").newInstance();
             ResultSet results = null;
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
@@ -216,8 +217,9 @@ public class CustomerDAO {
     
     
     //Updates a customer's address
-    public void updateCustomerAddress(int id, String address){
+    public boolean updateCustomerAddress(int id, String address){
     	try{
+    		Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
             
                 String prequery = "UPDATE Customers Set Address = ? WHERE id = ?";
@@ -229,15 +231,18 @@ public class CustomerDAO {
                 query.execute();
 
                 connection.close();
+                
+                
 
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
-
+    	return true;
     }//close updateCustomerAddress()
     
-    public void updatePhoneNumber(int id, String phoneNumber){
+    public boolean updatePhoneNumber(int id, String phoneNumber){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -256,10 +261,12 @@ public class CustomerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updatePhoneNumber
     
-    public void updateCity(int id, String city){
+    public boolean updateCity(int id, String city){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -278,10 +285,12 @@ public class CustomerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updatePhoneNumber
     
-    public void updateState(int id, String state){
+    public boolean updateState(int id, String state){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -300,10 +309,12 @@ public class CustomerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updateState
     
-    public void updateZip(int id, String zip){
+    public boolean updateZip(int id, String zip){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -321,18 +332,20 @@ public class CustomerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updateZip()
     
 
     //Sets a customer's account to inactive. Still usable for analytics
-    public void deleteCustomer(int id){
+    public boolean deleteCustomer(int id){
         try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
 
-            String prequery = "UPDATE Customers Set Active = 1 WHERE id = ?";
+            String prequery = "UPDATE Customers Set Active = 0 WHERE id = ?";
             PreparedStatement query = connection.prepareStatement(prequery);
             query.setInt(1, id);
 
@@ -343,9 +356,10 @@ public class CustomerDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
-
-
+        
+        return true;
     }//close deleteCustomer*/
     
 }//close class

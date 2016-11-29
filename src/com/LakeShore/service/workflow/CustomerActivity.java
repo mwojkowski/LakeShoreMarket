@@ -72,28 +72,28 @@ public class CustomerActivity {
         return custRep;
     }//close createCustomer
 
-    public void updateCustomerAddress(String id, String address){
-    	cManager.updateCustomerAddress(Integer.valueOf(id), address);    
+    public boolean updateCustomerAddress(String id, String address){
+    	return cManager.updateCustomerAddress(Integer.valueOf(id), address);    
     }//close updateCustomerAddress()
     
-    public void updatePhoneNumber(String id, String phoneNumber){
-    	cManager.updatePhoneNumber(Integer.valueOf(id), phoneNumber);
+    public boolean updatePhoneNumber(String id, String phoneNumber){
+    	return cManager.updatePhoneNumber(Integer.valueOf(id), phoneNumber);
     }//close updatePhoneNumber()
     
-    public void updateCity(String id, String city){
-    	cManager.updateCity(Integer.valueOf(id), city);
+    public boolean updateCity(String id, String city){
+    	return cManager.updateCity(Integer.valueOf(id), city);
     }//close updateCity()
     
-    public void updateState(String id, String state){
-    	cManager.updateState(Integer.valueOf(id), state);
+    public boolean updateState(String id, String state){
+    	return cManager.updateState(Integer.valueOf(id), state);
     }//close updateState()
     
-    public void updateZip(String id, String zip){
-    	cManager.updateZip(Integer.valueOf(id), zip);
+    public boolean updateZip(String id, String zip){
+    	return cManager.updateZip(Integer.valueOf(id), zip);
     }//close updateZip()
     
-    public void deleteCustomer(String id){
-    	cManager.deleteCustomer(Integer.valueOf(id));
+    public boolean deleteCustomer(String id){
+    	return cManager.deleteCustomer(Integer.valueOf(id));
     }//close deleteCustomer()
 
 

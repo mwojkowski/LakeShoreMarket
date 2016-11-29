@@ -31,20 +31,31 @@ public class ProductManager {
         return dao.getProductById(id);
     }//close getProductById()
     
-    public void updateName(int id, String name){
-    	dao.updateName(id, name);
+    public Product getProductByName(String name){
+    	return dao.getProductByName(name);
+    }
+    
+    public boolean updateName(int id, String name){
+    	return dao.updateName(id, name);
     	
     }//close updateProduct Address
     
-    public void updateDescription(int id, String description){
-    	dao.updateName(id, description);
+    public boolean updateDescription(int id, String description){
+    	return dao.updateName(id, description);
     	
     }//close updateProduct Address
 
-    
-    public void deleteProduct(int id){
-    	dao.deleteProduct(id);
+    public boolean deleteProduct(int id){
+    	return dao.deleteProduct(id);
     }//close deleteProduct
+    
+    public boolean updateQuantity(int id, int quantity){
+    	return dao.updateQuantity(id, quantity);
+    }
+    
+    public boolean updatePrice(int id, double price){
+    	return dao.updatePrice(id, price);
+    }
 
 	
 	

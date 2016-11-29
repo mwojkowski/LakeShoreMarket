@@ -17,10 +17,8 @@
   
 	<jaxrs:server name="RESTfulService" address="http://localhost:8081">
 		<jaxrs:serviceBeans>
-			<ref bean="CustomerServiceRest" />
-			<ref bean="PartnerServiceRest" />
-			<ref bean="ProductServiceRest" />
-			<ref bean="OrderServiceRest" />
+			
+			<ref bean="ResponseServiceRest" />
 		</jaxrs:serviceBeans>
 		<jaxrs:providers>
 			<ref bean="jacksonProvider" />
@@ -33,12 +31,12 @@
 			<jaxrs:schemaLocation>com.company.com.LakeShore.service.representation.PartnerRepresentation</jaxrs:schemaLocation>
 			<jaxrs:schemaLocation>com.company.com.LakeShore.service.representation.ProductRequest</jaxrs:schemaLocation>
 			<jaxrs:schemaLocation>com.company.com.LakeShore.service.representation.ProductRepresentation</jaxrs:schemaLocation>
+			<jaxrs:schemaLocation>com.company.com.LakeShore.service.representation.ResponseRequest</jaxrs:schemaLocation>
+			<jaxrs:schemaLocation>com.company.com.LakeShore.service.representation.ResponseRepresentation</jaxrs:schemaLocation>
 		</jaxrs:schemaLocations>
 
 	</jaxrs:server>
-  	<bean id="CustomerServiceRest" class="com.LakeShore.service.CustomerResource" />
-  	<bean id="PartnerServiceRest" class="com.LakeShore.service.PartnerResource" />
-  	<bean id="ProductServiceRest" class="com.LakeShore.service.ProductResource" />
-  	<bean id="OrderServiceRest" class="com.LakeShore.service.OrderResource" />
+	
+  	<bean id="ResponseServiceRest" class="com.LakeShore.service.ResponseResource" />
   
 </beans>

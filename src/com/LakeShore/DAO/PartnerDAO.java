@@ -158,7 +158,7 @@ public class PartnerDAO {
     }//close getPartnerById()
     
     //Updates a partners's address
-    public void updatePartnerAddress(int id, String address){
+    public boolean updatePartnerAddress(int id, String address){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
@@ -176,11 +176,13 @@ public class PartnerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
 
     }//close updatePartnerAddress()
     
-    public void updatePhoneNumber(int id, String phoneNumber){
+    public boolean updatePhoneNumber(int id, String phoneNumber){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -199,10 +201,12 @@ public class PartnerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updatePhoneNumber
     
-    public void updateCity(int id, String city){
+    public boolean updateCity(int id, String city){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -221,10 +225,12 @@ public class PartnerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updatePhoneNumber
     
-    public void updateState(int id, String state){
+    public boolean updateState(int id, String state){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -243,10 +249,12 @@ public class PartnerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updateState
     
-    public void updateZip(int id, String zip){
+    public boolean updateZip(int id, String zip){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -264,7 +272,9 @@ public class PartnerDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
     }//close updateZip()
     
     

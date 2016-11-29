@@ -163,6 +163,11 @@ public class ProductDAO {
                 temp.setID(results.getInt("id"));
                 temp.setName(results.getString("Name"));
                 temp.setDescription(results.getString("Description"));
+                temp.setSellerID(results.getInt("SellerID"));
+                temp.setQuantity(results.getInt("Quantity"));
+                temp.setPrice(results.getDouble("Price"));
+                
+                
 
             }//close while statement
 
@@ -178,7 +183,7 @@ public class ProductDAO {
 
 
     
-    public void updateName(int id, String name){
+    public boolean updateName(int id, String name){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -197,11 +202,14 @@ public class ProductDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	
+    	return true;
     }//close updatePhoneNumber
     
     
-    public void updateDescription(int id, String description){
+    public boolean updateDescription(int id, String description){
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
     		
@@ -220,13 +228,63 @@ public class ProductDAO {
             }//close try statement
             catch(Exception ex){
                 ex.printStackTrace();
+                return false;
             }//close Exception
+    	return true;
+    }//close updatePhoneNumber
+    
+    public boolean updateQuantity(int id, int quantity){
+    	try{
+    		Class.forName("com.mysql.jdbc.Driver").newInstance();
+    		
+            connection = DriverManager.getConnection(server, username, password);
+            
+                String prequery = "UPDATE Products Set Quantity = ? WHERE id = ?";
+                PreparedStatement query = connection.prepareStatement(prequery);
+                query.setInt(1, quantity);
+                query.setInt(2, id);
+                
+                
+                query.execute();
+
+                connection.close();
+
+            }//close try statement
+            catch(Exception ex){
+                ex.printStackTrace();
+                return false;
+            }//close Exception
+    	return true;
+    }//close updatePhoneNumber
+    
+    public boolean updatePrice(int id, double price){
+    	try{
+    		Class.forName("com.mysql.jdbc.Driver").newInstance();
+    		
+            connection = DriverManager.getConnection(server, username, password);
+            
+                String prequery = "UPDATE Products Set Price = ? WHERE id = ?";
+                PreparedStatement query = connection.prepareStatement(prequery);
+                query.setDouble(1, price);
+                query.setInt(2, id);
+                
+                
+                query.execute();
+
+                connection.close();
+
+            }//close try statement
+            catch(Exception ex){
+                ex.printStackTrace();
+                return false;
+            }//close Exception
+    	return true;
     }//close updatePhoneNumber
     
     
 
     //Removes an item from the 
-    public void deleteProduct(int id){
+    public boolean deleteProduct(int id){
         try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -243,7 +301,10 @@ public class ProductDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
+        
+        return true;
 
 
     }//close deleteCustomer*/

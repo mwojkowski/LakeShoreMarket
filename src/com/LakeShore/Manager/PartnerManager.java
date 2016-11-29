@@ -30,25 +30,25 @@ public class PartnerManager {
         return dao.getPartnerById(id);
     }//close getCustomerById()
     
-    public void updatePartnerAddress(int id, String address){
-    	dao.updatePartnerAddress(id, address);
+    public boolean updatePartnerAddress(int id, String address){
+    	return dao.updatePartnerAddress(id, address);
     	
     }//close updateCustomer Address
     
-    public void updatePhoneNumber(int id, String phoneNumber){
-    	dao.updatePhoneNumber(id,  phoneNumber);
+    public boolean updatePhoneNumber(int id, String phoneNumber){
+    	return dao.updatePhoneNumber(id,  phoneNumber);
     }//close updatePhoneNumber()
     
-    public void updateCity(int id, String city){
-    	dao.updateCity(id, city);
+    public boolean updateCity(int id, String city){
+    	return dao.updateCity(id, city);
     }//close updateCity()
     
-    public void updateState(int id, String state){
-    	dao.updateState(id, state);
+    public boolean updateState(int id, String state){
+    	return dao.updateState(id, state);
     }//close updateState()
     
-    public void updateZip(int id, String zip){
-    	dao.updateZip(id, zip);
+    public boolean updateZip(int id, String zip){
+    	return dao.updateZip(id, zip);
     }//close updateZip()
     
     

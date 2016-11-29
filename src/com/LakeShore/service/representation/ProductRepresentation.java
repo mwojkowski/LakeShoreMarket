@@ -42,7 +42,7 @@ public class ProductRepresentation {
     
     public int getQuantity(){	return quantity;	}
     
-    public void setPrice(int x)	{	this.price = x;		}
+    public void setPrice(double x)	{	this.price = x;		}
     
     public double getPrice(){	return price;	}
     

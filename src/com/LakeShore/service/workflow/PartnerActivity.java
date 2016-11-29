@@ -15,7 +15,7 @@ public class PartnerActivity {
 	}//close underloaded constructur
 	
 	public Set<PartnerRepresentation> getPartners(){
-        System.out.println("GET request for all Partners......");
+        //System.out.println("GET request for all Partners......");
         Set<Partner> Partners = new HashSet<Partner>();
 
         Set<PartnerRepresentation> PartnerRepresentations = new HashSet<PartnerRepresentation>();
@@ -73,24 +73,24 @@ public class PartnerActivity {
         return partRep;
     }//close createPartner
 
-    public void updatePartnerAddress(String id, String address){
-    	pManager.updatePartnerAddress(Integer.valueOf(id), address);    
+    public boolean updatePartnerAddress(String id, String address){
+    	return pManager.updatePartnerAddress(Integer.valueOf(id), address);    
     }//close updatePartnerAddress()
     
-    public void updatePhoneNumber(String id, String phoneNumber){
-    	pManager.updatePhoneNumber(Integer.valueOf(id), phoneNumber);
+    public boolean updatePhoneNumber(String id, String phoneNumber){
+    	return pManager.updatePhoneNumber(Integer.valueOf(id), phoneNumber);
     }//close updatePhoneNumber()
     
-    public void updateCity(String id, String city){
-    	pManager.updateCity(Integer.valueOf(id), city);
+    public boolean updateCity(String id, String city){
+    	return pManager.updateCity(Integer.valueOf(id), city);
     }//close updateCity()
     
-    public void updateState(String id, String state){
-    	pManager.updateState(Integer.valueOf(id), state);
+    public boolean updateState(String id, String state){
+    	return pManager.updateState(Integer.valueOf(id), state);
     }//close updateState()
     
-    public void updateZip(String id, String zip){
-    	pManager.updateZip(Integer.valueOf(id), zip);
+    public boolean updateZip(String id, String zip){
+    	return pManager.updateZip(Integer.valueOf(id), zip);
     }//close updateZip()
     
 	

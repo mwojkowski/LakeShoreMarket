@@ -64,7 +64,7 @@ public class OrderDAO {
     	return newOrder;
     }//close createOrder
     
-    public void submitOrder(int id){
+    public boolean submitOrder(int id){
     	try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -81,13 +81,15 @@ public class OrderDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
+    	return true;
     	
     }//close submitOrder
     
     
     //Sets the order status to Processing when a partner receives the order
-    public void processOrder(int id){
+    public boolean processOrder(int id){
     	try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -104,12 +106,14 @@ public class OrderDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
     	
+    	return true;
     }//close processOrder
 	
 	//OrderShipped
-    public void shipOrder(int id){
+    public boolean shipOrder(int id){
     	try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -126,11 +130,13 @@ public class OrderDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
+    	return true;
     }//close shipOrder()
 	
 	//OrderCancelled
-    public void cancelOrder(int id){
+    public boolean cancelOrder(int id){
     	try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -147,10 +153,12 @@ public class OrderDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
+    	return true;
     }//close cancelOrder
     
-    public void deliverOrder(int id){
+    public boolean deliverOrder(int id){
     	try{
         	
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -167,7 +175,9 @@ public class OrderDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close Exception
+    	return true;
     }//close deliverOrder
     
     public Order lookupOrder(int id){
@@ -207,15 +217,33 @@ public class OrderDAO {
         catch(Exception ex){
             ex.printStackTrace();
         }//close catch statement
-
-
-
         return temp;
     	
     }//close lookupOrder
+    
+    public boolean removeItem(int productID, int orderID){
+    	try{
+        	Class.forName("com.mysql.jdbc.Driver").newInstance();
+            connection = DriverManager.getConnection(server, username, password);
+
+            String prequery = "DELETE FROM OrderItems WHERE OrderID = ? AND productID = ?";
+            PreparedStatement query = connection.prepareStatement(prequery);
+            query.setInt(1, orderID);
+            query.setInt(2, productID);
+            
+            query.execute();       
+            
+            connection.close();
+        }//close try statement
+        catch(Exception ex){
+            ex.printStackTrace();
+            return false;
+        }//close catch statement
+		return true;
+    }//close removeItem
 	
 	//Add Item to Order
-	public void addItem(int orderID, int partnerID, int productID, int quantity, double price){
+	public boolean addItem(int orderID, int partnerID, int productID, int quantity, double price){
 		try{
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
@@ -234,9 +262,10 @@ public class OrderDAO {
         }//close try statement
         catch(Exception ex){
             ex.printStackTrace();
+            return false;
         }//close catch statement
+		return true;
 	}//close addItem
-	//Remove Item from order
 	
 	public String checkStatus(int id){
 		ResultSet x;

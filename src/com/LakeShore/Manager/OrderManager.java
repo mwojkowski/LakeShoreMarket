@@ -24,28 +24,28 @@ public class OrderManager {
 		return tempOrder;
 	}//close createOrder
 	
-	public void submitOrder(int id){
-		dao.submitOrder(id);
+	public boolean submitOrder(int id){
+		return dao.submitOrder(id);
 	}
 	
 	//OrderProcessing
-	public void processOrder(int id){
-		dao.processOrder(id);
+	public boolean processOrder(int id){
+		return dao.processOrder(id);
 	}//close processOrder
 	
 	//OrderShipped
-	public void shipOrder(int id){
-		dao.shipOrder(id);
+	public boolean shipOrder(int id){
+		return dao.shipOrder(id);
 	}//close shipOrder
 	
 	//OrderDelivered
-	public void deliverOrder(int id){
-		dao.deliverOrder(id);
+	public boolean deliverOrder(int id){
+		return dao.deliverOrder(id);
 	}//close deliverOrder()
 	
 	//OrderCancelled
-	public void cancelOrder(int id){
-		dao.cancelOrder(id);
+	public boolean cancelOrder(int id){
+		return dao.cancelOrder(id);
 	}//close cancelOrder()
 	
 	//Add Item to Order
@@ -61,8 +61,16 @@ public class OrderManager {
 		return temp;
 	}//close lookupOrder()
 	
-	public void addItem(int orderID, int partnerID, int productID, int quantity, double price){
-		dao.addItem(orderID, partnerID, productID, quantity, price);
+	public boolean removeItem(int orderID, int productID){
+		return dao.removeItem(productID, orderID);
+	}
+	
+	public boolean addItem(int orderID, int partnerID, int productID, int quantity, double price){
+		return dao.addItem(orderID, partnerID, productID, quantity, price);
 	}//close addItem
 	
-}
+	public String getStatus(int id){
+		return dao.checkStatus(id);
+	}
+	
+}//close class

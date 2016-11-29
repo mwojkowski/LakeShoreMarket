@@ -30,35 +30,41 @@ public class OrderActivity {
 	
 	//This method makes an order official. 
 	//Therefore, we need to notify the partner and charge the customers card.
-	public void submitOrder(String id){
-		oManager.submitOrder(Integer.valueOf(id));
+	public boolean submitOrder(String id){
+		try{
+			oManager.submitOrder(Integer.valueOf(id));
+		}
+		catch(Exception e){
+			return false;
+		}//close catch
 		
 		Notifier notifier = new Notifier();//notify partner of new order...
 		notifier.notifyPartner(Integer.valueOf(id));
 		
 		TransactionProcessor processor = new TransactionProcessor();//charge the credit card...
 		processor.chargeCreditCard("1234-5678-9012-3456", Integer.valueOf(id));
-		
+		return true;
 	}//close submitOrder
 	
-	public void processOrder(String id){
-		oManager.processOrder(Integer.valueOf(id));
+	public boolean processOrder(String id){
+		return oManager.processOrder(Integer.valueOf(id));
 	}//close processOrder
 	
-	public void shipOrder(String id){
-		oManager.shipOrder(Integer.valueOf(id));
+	public boolean shipOrder(String id){
+		
 		
 		Notifier notifier = new Notifier();
 		notifier.orderFulfillment(Integer.valueOf(id));
 		
+		return oManager.shipOrder(Integer.valueOf(id));
 	}//close shipOrder
 	
-	public void deliverOrder(String id){
-		oManager.deliverOrder(Integer.valueOf(id));
+	public boolean deliverOrder(String id){
+		return oManager.deliverOrder(Integer.valueOf(id));
 	}//close deliverOrder
 	
-	public void cancelOrder(String id){
-		oManager.cancelOrder(Integer.valueOf(id));
+	public boolean cancelOrder(String id){
+		return oManager.cancelOrder(Integer.valueOf(id));
 	}//close cancelOrder
 	
 	//Add Item to Order
@@ -81,8 +87,16 @@ public class OrderActivity {
 		
 	}//close lookupOrder
 	
-	public void addItem(String orderID, String partnerID, String productID, String quantity, String price){
-		oManager.addItem(Integer.valueOf(orderID), Integer.valueOf(partnerID), Integer.valueOf(productID), Integer.valueOf(quantity), Double.valueOf(price));
+	public boolean removeItem(String orderID, String productID){
+		return oManager.removeItem(Integer.valueOf(orderID), Integer.valueOf(orderID));
+	}//close removeItem
+	
+	public boolean addItem(String orderID, String partnerID, String productID, String quantity, String price){
+		return oManager.addItem(Integer.valueOf(orderID), Integer.valueOf(partnerID), Integer.valueOf(productID), Integer.valueOf(quantity), Double.valueOf(price));
 	}//close addItem
+	
+	public String checkStatus(String id){
+		return oManager.getStatus(Integer.valueOf(id));
+	}
 
 }//close class
