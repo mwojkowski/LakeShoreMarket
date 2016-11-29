@@ -50,8 +50,8 @@ public class ProductActivity {
 
     }//close getProductById()
 
-    public ProductRepresentation createProduct(String name, String description){
-        Product prod = pManager.addProduct(name, description);
+    public ProductRepresentation createProduct(String name, String description, String sellerID){
+        Product prod = pManager.addProduct(name, description, Integer.valueOf(sellerID));
 
         ProductRepresentation prodRep = new ProductRepresentation();
         

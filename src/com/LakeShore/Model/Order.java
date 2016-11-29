@@ -10,7 +10,8 @@ import java.util.*;
 public class Order {
 	private int id;
 	private String status;
-	private Set<OrderItem> items = new HashSet<OrderItem>();
+	private int customerID;
+	public Set<OrderItem> items = new HashSet<OrderItem>();
 	
 	public Order(){
 		
@@ -29,11 +30,21 @@ public class Order {
 		this.status = x;
 	}//close setStatus
 	
+	public String getStatus(){
+		return status;
+	}
 	
 	public void addOrderItem(int cid, int partnerID, int productID, double price, int quantity){
 		items.add(new OrderItem(id, cid, partnerID, productID, price, quantity));
 	}//close addOrderItem
 	
+	public Set<OrderItem> getItems(){
+		return items;
+	}
+	
+	public void setCustomerID(int id){	this.customerID = id;	}
+	
+	public int getCustomerID(){	return customerID;	}
 	
 
 }//close class

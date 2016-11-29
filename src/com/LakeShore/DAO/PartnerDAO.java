@@ -267,27 +267,8 @@ public class PartnerDAO {
             }//close Exception
     }//close updateZip()
     
-
-    /*//Sets a partners's account to inactive. Still usable for analytics
-    public void deletePartner(int id){
-        try{
-        	
-        	Class.forName("com.mysql.jdbc.Driver").newInstance();
-            connection = DriverManager.getConnection(server, username, password);
-
-            String prequery = "UPDATE Partners Set Active = 1 WHERE id = ?";
-            PreparedStatement query = connection.prepareStatement(prequery);
-            query.setInt(1, id);
-
-            query.execute();
-
-            connection.close();
-
-        }//close try statement
-        catch(Exception ex){
-            ex.printStackTrace();
-        }//close Exception
+    
+    
 
 
-    }//close deletePartner*/
 }

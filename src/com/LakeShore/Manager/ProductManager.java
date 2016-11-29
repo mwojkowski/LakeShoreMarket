@@ -15,8 +15,8 @@ public class ProductManager {
     }//close underloaded Constructor
 
 
-    public Product addProduct(String name, String description){
-        Product x = dao.addProduct(name, description);
+    public Product addProduct(String name, String description, int sellerID){
+        Product x = dao.addProduct(name, description, sellerID);
         
         return x;
     }//close class

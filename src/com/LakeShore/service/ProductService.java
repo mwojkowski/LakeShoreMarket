@@ -13,7 +13,7 @@ public interface ProductService {
 
 	public Set<ProductRepresentation> getProducts();
 	public ProductRepresentation getProductById(String id);
-	public ProductRepresentation createProduct(String name, String description);
+	public ProductRepresentation createProduct(String name, String description, String sellerID);
 	public void updateName(String id, String name);
 	public void updateDescription(String id, String description);
 	

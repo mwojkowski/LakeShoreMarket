@@ -34,4 +34,18 @@ public class OrderRepresentation {
 	public void addOrderItem(int cid, int partnerID, int productID, double price, int quantity){
 		items.add(new OrderItem(id, cid, partnerID, productID, price, quantity));
 	}//close addOrderItem
+	
+	public void addOrderITem(OrderItem x){
+		items.add(x);
+	}
+	
+	public void addItems(Set<OrderItem> x){
+		for(OrderItem i : x){
+			items.add(i);
+		}
+		
+	}
+	
+	
+	
 }

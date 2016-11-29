@@ -56,17 +56,18 @@ public class ProductDAO {
     
     //adds a customer to the database using just firstName and lastName.
     //Second query runs to get the last added user, so we can get the user's id
-    public Product addProduct(String name, String description){
+    public Product addProduct(String name, String description, int sellerID){
     	Product temp = new Product();
     	
     	try{
     		Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
 
-            String prequery = "INSERT INTO Products (Name, Description) VALUES (?, ?)";
+            String prequery = "INSERT INTO Products (Name, Description, SellerID) VALUES (?, ?, ?)";
             PreparedStatement query = connection.prepareStatement(prequery);
             query.setString(1, name);
             query.setString(2, description);
+            query.setInt(3, sellerID);
 
 
             query.execute();
@@ -87,7 +88,7 @@ public class ProductDAO {
         	Class.forName("com.mysql.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(server, username, password);
 
-            String prequery = "Select id FROM Products where FirstName = ? AND LastName = ? LIMIT 1";
+            String prequery = "Select id FROM Products where Name = ? AND Description = ? LIMIT 1";
             PreparedStatement query = connection.prepareStatement(prequery);
             query.setString(1, name);
             query.setString(2, description);

@@ -41,10 +41,10 @@ public class ProductResource implements ProductService {
     @PUT
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
 	@Path("/Products/")
-	public ProductRepresentation createProduct(@HeaderParam("Name") String name, @HeaderParam("Description") String description){
+	public ProductRepresentation createProduct(@HeaderParam("Name") String name, @HeaderParam("Description") String description, @HeaderParam("SellerID") String sellerID){
     	System.out.println("PUT Request for Product with name: " + name + ".....");
     	ProductActivity prodActivity = new ProductActivity();
-    	return prodActivity.createProduct(name, description);
+    	return prodActivity.createProduct(name, description, sellerID);
     	
     }//close addProduct
     

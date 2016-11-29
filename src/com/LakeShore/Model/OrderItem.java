@@ -1,8 +1,10 @@
 package com.LakeShore.Model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.LakeShore.Model.*;
 
-
+@XmlRootElement
 public class OrderItem {
 	private int orderID;//Links this tuple in the database to the order it belongs to
 	private int partnerID;//Links this tuple to the partner that this product was bought from
