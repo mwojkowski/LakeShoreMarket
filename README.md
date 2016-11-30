@@ -22,14 +22,46 @@ The following classes may be used:
 -* Products
 - *Orders
 
+###Class Attributes
 Each class has the following attributes:
 Customers
--* id
--* FirstName
--* LastName
--* Address
--* PhoneNumber
--* City
--* State
--* Zip
+* id
+* FirstName
+* LastName
+* Address
+* PhoneNumber
+* City
+* State
+* Zip
+
+Orders
+* id
+* Status
+*CustomerID
+
+OrderItem
+* OrderID
+* PartnerID
+* CustomerID
+* ProductID
+* Price
+* Quantity
+
+Product
+* Name
+* Description
+* PartnerID
+* Quantity
+* Inventory
+
+###Examples
+Getting all customers:
+@GET
+>http://localhost:8081/API/{Class}
+
+Looking up a specific Partner:
+@GET
+>http://localhost:8081/API/Partners/2
+
+Modifying a Customers 
 
