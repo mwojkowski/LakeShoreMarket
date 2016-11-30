@@ -55,13 +55,20 @@ Product
 * Inventory
 
 ###Examples
-Getting all customers:
+Getting all objects of a class:
 @GET
->http://localhost:8081/API/{Class}
+>http://localhost:8081/API/{Class(plural)}
 
-Looking up a specific Partner:
+Looking up a specific class with an id:
 @GET
 >http://localhost:8081/API/Partners/2
 
-Modifying a Customers 
+Modifying a class's attribute:
+@POST
+HeaderParameter: New Attribute Value. All first letters of each word capital, no spaces.
+>http://localhost:8081/API/{Class(plural)}/{Attribute}/id
+
+Deleting a class:
+@DELETE
+>http://localhost:8081/API/{Class(plural})/id
 
