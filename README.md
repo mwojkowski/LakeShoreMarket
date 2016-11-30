@@ -10,3 +10,26 @@ The project can be broken down into a few major layers inside of the domain laye
 *Service
 *Workflow
 
+##Using the API
+=====
+After opening the project in Eclipse, run the project in Apache Tomcat. 
+
+All commands will follow a similar URI pattern: http://localhost:8081/API/{Object}/{attribute}
+
+The following classes may be used:
+*Customers
+*Partners
+*Products
+*Orders
+
+Each class has the following attributes:
+Customers
+-*id
+-*FirstName
+-*LastName
+-*Address
+-*PhoneNumber
+-*City
+-*State
+-*Zip
+
