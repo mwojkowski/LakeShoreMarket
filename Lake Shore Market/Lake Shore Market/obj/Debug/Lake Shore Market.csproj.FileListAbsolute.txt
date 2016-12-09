@@ -1,0 +1,53 @@
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Lake Shore Market.dll.config
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Lake Shore Market.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Lake Shore Market.pdb
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Antlr3.Runtime.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\AspNet.ScriptManager.bootstrap.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\EntityFramework.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\EntityFramework.SqlServer.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.FriendlyUrls.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Google.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Web.Infrastructure.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Newtonsoft.Json.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Owin.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\System.Web.Optimization.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\System.Web.Providers.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\WebGrease.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\System.Web.Optimization.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Antlr3.Runtime.pdb
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Newtonsoft.Json.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.FriendlyUrls.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\EntityFramework.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\EntityFramework.SqlServer.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Google.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\obj\Debug\Lake Shore Market.csprojResolveAssemblyReference.cache
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\obj\Debug\Lake Shore Market.dll
+c:\users\matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\obj\Debug\Lake Shore Market.pdb
+C:\Users\Matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\RestSharp.dll
+C:\Users\Matthew\documents\visual studio 2013\Projects\Lake Shore Market\Lake Shore Market\bin\RestSharp.xml
